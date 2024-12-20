@@ -1,0 +1,6 @@
+fetch('https://api.jsonbin.io/v3/b/6765a212ad19ca34f8de66a2')
+  .then(response => response.json())
+  .then(data => {
+    let randomJoke = data.jokes[Math.floor(Math.random() * data.jokes.length)];
+    console.log(randomJoke);
+  });
